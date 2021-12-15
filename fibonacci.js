@@ -24,4 +24,4 @@ const fibonacci = (n) => {
 // branch of 4 and branch 3
 
 
-fibonacci(7);
+fibonacci(7);               

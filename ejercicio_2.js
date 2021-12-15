@@ -1,23 +1,4 @@
-//Problema 1 y 2
-
-// Start
-
-const num = 2;
-const nom = "Jose";
-
-
-// Ciclo
-for(let i=0; i < num; ++i){
-    // Imprimir nom
-    console.log(nom);
-}
-
-
-// End
-
-
-
-
+// Problema:Haga un programa al cual se le digite un número entero y despliegue por pantalla la suma de  los números comprendidos entre 0 y el número digitado.
 
 // Leer numero 
 let num = 9;
