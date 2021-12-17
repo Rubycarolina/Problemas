@@ -1,26 +1,24 @@
-/**Dada una matriz de números ordenados y una suma objetivo, busque un par en la matriz cuya 
- * suma sea igual al objetivo dado. Escriba una función para devolver los índices de los dos 
- * números (es decir, el par) de manera que se sumen al objetivo dado.
-Input: [1, 2, 3, 4, 6], sum=6
-Output: [1, 3]
-Los números en los índices 1 y 3 suman  6: 2+4=6
+/**Se hace un triángulo con latas de leche condensadas, de la siguiente manera: 
+ * 1 lata  en el tope, 3 en el siguiente, 5 en el siguiente etc. Realice una función para cada
+ *  uno de  los puntos siguientes: 
+(a) ¿Cuántos niveles se tiene con n latas? 
+(b) ¿Cuántas latas sobran haciendo el triángulo si se tienen n latas (con 13 latas se 
+    tienen 3  niveles y sobran 4)?
  */
 
-var array = [2, 3, 3, 3, 6, 9, 9];
-function eliminarDuplicados(array) {
-    var i = 0;
-    var j = 1;
-    var aux = 0;
-    while (j < array.length) {
-        if (array[i] == array[j]) {
-            j++;
-        } else {
-            i++;
-            array[i] = array[j];
-            j++;
-        }
+    var latas = 1 * prompt ("Introduzca la cantidad de LATAS.");
+
+    var sobrador = 0;
+    var temporal = 1;
+    var contador = 1;
+    var niveles = 0;
+    
+    while (latas >= contador){
+        temporal = temporal + 2;
+        sobrador = latas - contador;
+        contador = contador + temporal;
+        niveles = niveles + 1;
     }
-    aux = i + 1;
-    return aux;
-}
-console.log(eliminarDuplicados(array));
+    
+    document.write("<h1><strong>Niveles:</strong> " + niveles + "<br>");
+    document.write("<strong>Sobran:</strong> " + sobrador);
